@@ -118,7 +118,7 @@ void Kernels::launch_collatz(const bool& _wait) {
     Memory<bool>     skip_task          = Memory<bool>(1);
 
     start_point[0]        = 1ull << 40;
-	n_of_thread_cycles[0] = 1ull << 10;
+	n_of_thread_cycles[0] = 1ull << 9;
 	checksum[0]           = 0;
 	skip_task[0]          = false;
 
