@@ -41,7 +41,7 @@ __device__ Kernels::uint128_t Kernels::collatz_step(const uint128_t& _a,
 
     atomicAdd(reinterpret_cast<unsigned int*>(_checksum), (shift >> 1) + 1);
 
-    uint8_t tzs = __clzll(__brevll(result.low));
+    const uint8_t tzs = __clzll(__brevll(result.low));
 
     if (tzs == 64) {
         result.low  = result.high >> __clzll(__brevll(result.high));
